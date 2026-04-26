@@ -1,0 +1,11 @@
+{
+  "name": "ecommerce-demo",
+  "version": "1.0.0",
+  "description": "Vanilla JS E-Commerce Demo",
+  "scripts": {
+    "test:ci": "playwright test --reporter=html"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0"
+  }
+}

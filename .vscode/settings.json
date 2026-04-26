@@ -1,0 +1,47 @@
+{
+    "mcp": {
+        "servers": {
+            "atlassian": {
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@atlassian/mcp-atlassian",
+                    "--transport",
+                    "stdio"
+                ],
+                "env": {
+                    "JIRA_URL": "https://gshivakumar2501.atlassian.net/",
+                    "JIRA_USERNAME": "gshivakumar2501@gmail.com",
+                    "JIRA_API_TOKEN": "REDACTED"
+                }
+            },
+            "playwright": {
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@playwright/mcp@latest",
+                    "--output-dir",
+                    "/tmp/playwright-mcp",
+                    "--user-data-dir",
+                    "/Users/hnai/Library/Application Support/playwright-mcp"
+                ]
+            },
+            "filesystem": {
+                "command": "npx",
+                "args": [
+                    "-y",
+                    "@modelcontextprotocol/server-filesystem",
+                    "/Users/hnai/Desktop/qa-training-testometer-day-2",
+                    "/Users/hnai/Downloads"
+                ]
+            },
+            "github": {
+                "command": "npx",
+                "args": ["-y", "@modelcontextprotocol/server-github@latest"],
+                "env": {
+                    "GITHUB_PERSONAL_ACCESS_TOKEN": "REDACTED"
+                }
+            }
+        }
+    }
+}

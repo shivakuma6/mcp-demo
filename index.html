@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login">
+    <input name="username" placeholder="Username">
+    <input name="password" type="password" placeholder="Password">
+    <button type="submit">Login</button>
+    <div class="error-message" style="display:none;color:red;">Invalid credentials</div>
+  </div>
+  <div class="product-list" style="display:none;">
+    <div class="product">
+      <span>Laptop</span>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <span>Smartphone</span>
+      <button class="add-to-cart-typo">Add to Cart</button>
+    </div>
+    <a class="cart-link" href="#">Cart</a>
+  </div>
+  <div class="cart" style="display:none;">
+    <div class="cart-items"></div>
+    <button class="checkout-btn">Checkout</button>
+  </div>
+  <div class="success-message" style="display:none;">Checkout successful!</div>
+  <script src="app.js"></script>
+</body>
+</html>
