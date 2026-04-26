@@ -57,9 +57,9 @@ jobs:
           git fetch origin main
           git diff --name-only origin/main > changed_files.txt
           cat changed_files.txt
-          echo "\nImpacted Areas:"
+          echo -e "\nImpacted Areas:"
           awk -F/ '{print $1}' changed_files.txt | sort | uniq
-          echo "\nTest Suggestions:"
+          echo -e "\nTest Suggestions:"
           awk '/\.js$|\.ts$|\.jsx$|\.tsx$|\.py$|\.java$|\.go$|\.rb$|\.php$|\.html$|\.css$|\.json$/ {print "Consider adding or updating tests for: " $0}' changed_files.txt
 
   deploy-pages:
